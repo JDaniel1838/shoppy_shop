@@ -1,0 +1,26 @@
+
+POST  http://localhost:5000/api/v1/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "phoneNumber": "2491374830",
+    "names":"Juan Daniel",
+    "lastName": "Espíndola Pérez",
+    "address":"Calle 7 sur #707",
+    "password":"12345678",
+    "repassword":"12345678"
+}
+
+###
+POST  http://localhost:5000/api/v1/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "phoneNumber": "2491374830",
+    "password":"gomitas"
+}
+
+
+###
+GET http://localhost:5000/api/v1/auth/user_data HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTY2NzA2OTg3NywiZXhwIjoxNjY3MDcwNzc3fQ.CO4Emzp9cZm5eaGG-2RaDnOnHBgq_CZOxAC3t2SOiI8
